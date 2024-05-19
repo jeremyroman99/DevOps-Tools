@@ -1,0 +1,67 @@
+name: ci-sonarqube-android
+on:
+  pull_request:
+    branches: [develop, release]
+jobs:
+  SonarCloud:
+    name: Build and analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin' 
+          java-version: '17' 
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Cache Gradle packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
+      - name: Permisos
+        run: chmod +x gradlew
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew build sonar --info
+      - name: Build y lint
+        run: |
+          ./gradlew build
+          ./gradlew lintDebug
+      - name: Python para publish_comment_table.py
+        run: |
+          pip install beautifulsoup4
+          pip install PyGithub
+          pip install tabulate
+          python exportar_lint.py
+          cat overview.txt
+          python generando_mensaje.py
+          cat formatted_overview.txt
+      - run: |
+          echo "LINT_ERRORS=$(grep -o '0 errors,' app/build/reports/lint-results-debug.txt | cut -d' ' -f1)" >> $GITHUB_ENV
+          echo "LINT_WARNINGS=$(grep -o '[0-9]\+ warnings' app/build/reports/lint-results-debug.txt | cut -d' ' -f1)" >> $GITHUB_ENV
+      - name: Publish PR comment info
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python publish_comment_info.py
+      - name: Publish PR comment table
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python publish_comment_table.py     
+      - name: Upload lint report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: app/build/reports

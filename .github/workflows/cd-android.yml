@@ -1,0 +1,139 @@
+name: cd-android
+on:
+  push:
+    branches: [develop, release, main]
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Permisos
+      run: chmod +x gradlew
+    - name: build release 
+      run: ./gradlew build
+    - name: build release 
+      run: ./gradlew assembleRelease
+    - name: upload-artifact-apk
+      uses: actions/upload-artifact@v1
+      with:
+          name: APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+    - name: build release 
+      run: ./gradlew app:bundleRelease
+    - name: Sign AAB
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: app/build/outputs/bundle/release
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: ${{ secrets.KEY_ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
+    - name: upload-artifact-aab
+      uses: actions/upload-artifact@v1
+      with:
+          name: AAB
+          path: app/build/outputs/bundle/release/app-release.aab
+  release:
+   name: Release App Bundle
+   needs: [build]
+   if: |
+         always() &&
+         github.event_name == 'push'  &&
+         github.ref == 'refs/heads/release' &&
+         needs.build.result == 'success'
+   runs-on: ubuntu-latest
+   steps:
+     - name: Download from build APK
+       uses: actions/download-artifact@v1
+       with:
+         name: APK
+     - name: Download from build AAB
+       uses: actions/download-artifact@v1
+       with:
+         name: AAB
+     - run: ls
+     - name: Build project
+       run: |
+        zip --junk-paths artefactos AAB/app-release.aab APK/app-debug.apk
+     - name: Obtener la última versión del release
+       id: get_latest_release
+       run: |
+          # Llamar a la API de GitHub para obtener el último release
+          latest_release=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.tag_name')
+          echo "Último release: $latest_release"
+
+          # Extraer el número de versión y aumentarlo en uno
+          version=$(echo $latest_release | cut -c 2-) # Eliminar el prefijo 'v'
+          IFS='.' read -r major minor patch <<< "$version"
+          ((patch++))
+          new_version="v${major}.${minor}.${patch}"
+
+          echo "Nueva versión: $new_version"
+
+          # Establecer la nueva versión como variable de entorno
+          echo "NEW_VERSION=${new_version}" >> $GITHUB_ENV
+     - name: Crear Release
+       id: create_release
+       uses: actions/create-release@v1
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+          tag_name: ${{ env.NEW_VERSION }}
+          release_name: Release ${{ env.NEW_VERSION }}
+
+     - name: Upload Release
+       id: upload_release_asset
+       uses: actions/upload-release-asset@v1.0.1
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+         upload_url: ${{ steps.create_release.outputs.upload_url }}
+         asset_path: ./artefactos.zip
+         asset_name: artefactos.zip
+         asset_content_type: application/zip
+     - run: echo "Upload returned with status=${{ job.status }}."
+
+  prd:
+    runs-on: ubuntu-latest
+    needs: [build,release]
+    if: |
+         always() &&
+         github.event_name == 'push'  &&
+         github.ref == 'refs/heads/main' &&
+         (needs.release.result == 'success' || needs.release.result == 'skipped') &&
+         needs.build.result == 'success'
+    steps:
+    - name: Download from build APK
+      uses: actions/download-artifact@v1
+      with:
+        name: APK
+    - name: upload artifact to Firebase App Distribution
+      uses: wzieba/Firebase-Distribution-Github-Action@v1
+      with:
+        appId: 1:185849458770:android:2d5aeac37005221f626f8b
+        serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+        groups: testers
+        file: APK/app-debug.apk
+    - name: Download from build AAB
+      uses: actions/download-artifact@v1
+      with:
+        name: AAB
+    - run: ls
+    - name: Upload App Bundle
+      uses: actions/upload-artifact@v1
+      with:
+          name: aab-build
+          path: AAB/app-release.aab
+          retention-days: 7
+    - name: Deploy to Play Store
+      uses: r0adkll/upload-google-play@v1
+      with:
+        serviceAccountJsonPlainText: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+        packageName: com.devopstools.app
+        releaseFiles: AAB/app-release.aab
+        track: internal

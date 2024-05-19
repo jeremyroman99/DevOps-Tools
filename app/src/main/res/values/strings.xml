@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">DevOps-Tools</string>
+    <string name="app_name">DevOps Untels</string>
+    <string name="NombreRoman">Jeremy Jordan Román Quispe</string>
+    <string name="DescripcionRoman">DevSecOps Engineer | Cloud Engineer | Systems Engineer</string>
+    <string name="NombreCosme">Carlos Daniel Cosme Hernandez</string>
+    <string name="DescripcionCosme">Systems Engineer | DevOps Engineer</string>
+    <string name="TituloPresentacion">DevOps Untels: Guía para implementar DevOps en equipos de desarrollo</string>
+    <string name="DescripcionBrevePresentacion">Esta aplicacion llamada DevOps Untels es parte de una investigacion que esta siendo desarrollada por alumnos de la UNTELS
+                                y que busca demostrar los beneficios de la implementación efectiva de DevOps. Ademas en esta aplicacion brindaremos algunas guias
+                                y recursos que muestran cómo mejorar tus prácticas de desarrollo de software y potenciar la colaboración en tu equipo.</string>
+    <string name="copyright_text">© 2024 Roman | Cosme</string>
+
+    <!--Bottom Navigation Names-->
+    <string name="home">Inicio</string>
+    <string name="resources">Recursos</string>
+    <string name="collaborator">Colaboradores</string>
+
 </resources>

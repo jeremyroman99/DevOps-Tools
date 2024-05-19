@@ -2,4 +2,9 @@
 <resources>
 
     <style name="Theme.DevOpsTools" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Splashtheme" parent="Theme.DevOpsTools">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+
+    </style>
 </resources>

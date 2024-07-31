@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parentRelativePresentacion"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoVista">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="30dp"
-                android:text="@string/TituloPresentacion"
+                android:text="@string/pipeline_de_ci_cd"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="28sp"
@@ -34,48 +35,60 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewDescripcionBrevePresentacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="25dp"
-                android:elegantTextHeight="true"
-                android:text="@string/DescripcionBrevePresentacion"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="italic"
+                android:id="@+id/textViewCI"
+                style="@style/StyleSubtitulo"
+                android:text="@string/txt_ci"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
-            <ImageView
-                android:id="@+id/imageviewPresentacion"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginBottom="25dp"
-                android:src="@drawable/ic_devopsuntels"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <TextView
+                android:id="@+id/textViewObjetivoCI"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo_ci"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewDescripcionBrevePresentacion" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewCI" />
 
             <TextView
-                android:id="@+id/textViewCopyright"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/copyright_text"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/textViewpunto1CI"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_ci"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivoCI" />
+
+            <TextView
+                android:id="@+id/textViewcontenido1CI"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1CI" />
+
+            <TextView
+                android:id="@+id/textViewpunto2CI"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1CI" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2CI"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2CI" />
+            
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -14,5 +14,13 @@
     <string name="home">Inicio</string>
     <string name="resources">Recursos</string>
     <string name="collaborator">Colaboradores</string>
+    <string name="pipeline_de_ci_cd">Pipeline de CI/CD</string>
+    <string name="txt_ci">Integración Continua (CI):</string>
+    <string name="txt_cd">Despliegue Continuo (CD):</string>
+    <string name="txt_objetivo_ci">Objetivo: Automatizar la integración de código para que los cambios sean probados y verificados automáticamente, ayudando a detectar errores rápidamente y mejorando la calidad del software.</string>
+    <string name="txt_punto1_ci">1. Configuración de Pipelines </string>
+    <string name="txt_contenido1_ci">Jenkins: Define pipelines con Jenkinsfile, utilizando pipelines declarativos o de scripted. Plugins para integración con Git, control de versiones y herramientas de construcción.\nGitLab CI/CD: Define pipelines en .gitlab-ci.yml en el repositorio.\nAWS CodePipeline: Configura pipelines desde la consola de AWS, definiendo las fases (Source, Build, Deploy).</string>
+    <string name="txt_punto2_ci">2. Estado y Logs de los Builds</string>
+    <string name="txt_contenido2_ci">Jenkins: Accede a la consola de Jenkins para ver los logs de los builds y su estado. \nGitLab CI/CD: Visita la sección CI/CD del proyecto para ver los resultados de los pipelines y los logs. \nAWS CodePipeline: Revisa el estado de cada fase en la consola de AWS, con detalles de logs y errores.</string>
 
 </resources>

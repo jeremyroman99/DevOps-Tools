@@ -1,26 +1,25 @@
 <resources>
     <string name="app_name">DevOps Untels</string>
-    <string name="NombreRoman">Jeremy Jordan Román Quispe</string>
-    <string name="DescripcionRoman">DevSecOps Engineer | Cloud Engineer | Systems Engineer</string>
-    <string name="NombreCosme">Carlos Daniel Cosme Hernandez</string>
-    <string name="DescripcionCosme">Systems Engineer | DevOps Engineer</string>
-    <string name="TituloPresentacion">DevOps Untels: Guía para implementar DevOps en equipos de desarrollo</string>
-    <string name="DescripcionBrevePresentacion">Esta aplicacion llamada DevOps Untels es parte de una investigacion que esta siendo desarrollada por alumnos de la UNTELS
-                                y que busca demostrar los beneficios de la implementación efectiva de DevOps. Ademas en esta aplicacion brindaremos algunas guias
-                                y recursos que muestran cómo mejorar tus prácticas de desarrollo de software y potenciar la colaboración en tu equipo.</string>
     <string name="copyright_text">© 2024 Roman | Cosme</string>
 
     <!--Bottom Navigation Names-->
     <string name="home">Inicio</string>
     <string name="resources">Recursos</string>
     <string name="collaborator">Colaboradores</string>
+
     <string name="pipeline_de_ci_cd">Pipeline de CI/CD</string>
     <string name="txt_ci">Integración Continua (CI):</string>
-    <string name="txt_cd">Despliegue Continuo (CD):</string>
     <string name="txt_objetivo_ci">Objetivo: Automatizar la integración de código para que los cambios sean probados y verificados automáticamente, ayudando a detectar errores rápidamente y mejorando la calidad del software.</string>
     <string name="txt_punto1_ci">1. Configuración de Pipelines </string>
     <string name="txt_contenido1_ci">Jenkins: Define pipelines con Jenkinsfile, utilizando pipelines declarativos o de scripted. Plugins para integración con Git, control de versiones y herramientas de construcción.\nGitLab CI/CD: Define pipelines en .gitlab-ci.yml en el repositorio.\nAWS CodePipeline: Configura pipelines desde la consola de AWS, definiendo las fases (Source, Build, Deploy).</string>
     <string name="txt_punto2_ci">2. Estado y Logs de los Builds</string>
     <string name="txt_contenido2_ci">Jenkins: Accede a la consola de Jenkins para ver los logs de los builds y su estado. \nGitLab CI/CD: Visita la sección CI/CD del proyecto para ver los resultados de los pipelines y los logs. \nAWS CodePipeline: Revisa el estado de cada fase en la consola de AWS, con detalles de logs y errores.</string>
+    <string name="txt_cd">Despliegue Continuo (CD):</string>
+    <string name="objetivo_cd">Objetivo: Automatizar el despliegue de aplicaciones para que los cambios se implementen de forma continua y segura en los entornos de producción.</string>
+    <string name="txt_punto1_cd">1. Automatización de Despliegues</string>
+    <string name="txt_contenido1_cd">Jenkins: Usa plugins como AWS CodeDeploy Plugin o Kubernetes Plugin para automatizar despliegues.\nGitLab CI/CD: Define scripts en .gitlab-ci.yml para ejecutar despliegues con herramientas como Terraform, Ansible o scripts personalizados.\nAWS CodePipeline: Configura fases de despliegue con AWS CodeDeploy, Elastic Beanstalk, o Lambda.</string>
+    <string name="txt_punto2_cd">2. Monitoreo de Despliegues</string>
+    <string name="txt_contenido2_cd">Jenkins: Plugins de monitoreo como Grafana y Prometheus.\nGitLab CI/CD: Integración con herramientas de monitoreo y alertas como Prometheus, Grafana, y ELK Stack.\nAWS CodePipeline: Monitorea pipelines y fases con CloudWatch Logs y CloudTrail para auditoría.</string>
+
 
 </resources>

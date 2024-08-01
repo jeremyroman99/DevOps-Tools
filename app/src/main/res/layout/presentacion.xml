@@ -111,7 +111,7 @@
             <TextView
                 android:id="@+id/textViewcontenido1CD"
                 style="@style/StyleContenidos"
-                android:text="@string/txt_contenido1_ci"
+                android:text="@string/txt_contenido1_cd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
             <TextView
                 android:id="@+id/textViewpunto2CD"
                 style="@style/StylePuntos"
-                android:text="@string/txt_punto2_ci"
+                android:text="@string/txt_punto2_cd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
             <TextView
                 android:id="@+id/textViewcontenido2CD"
                 style="@style/StyleContenidos"
-                android:text="@string/txt_contenido2_ci"
+                android:text="@string/txt_contenido2_cd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"

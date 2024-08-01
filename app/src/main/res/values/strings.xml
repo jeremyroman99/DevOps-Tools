@@ -7,6 +7,7 @@
     <string name="resources">Recursos</string>
     <string name="collaborator">Colaboradores</string>
 
+    <!--CI CD-->
     <string name="pipeline_de_ci_cd">Pipeline de CI/CD</string>
     <string name="txt_ci">Integración Continua (CI):</string>
     <string name="txt_objetivo_ci">Objetivo: Automatizar la integración de código para que los cambios sean probados y verificados automáticamente, ayudando a detectar errores rápidamente y mejorando la calidad del software.</string>
@@ -21,5 +22,26 @@
     <string name="txt_punto2_cd">2. Monitoreo de Despliegues</string>
     <string name="txt_contenido2_cd">Jenkins: Plugins de monitoreo como Grafana y Prometheus.\nGitLab CI/CD: Integración con herramientas de monitoreo y alertas como Prometheus, Grafana, y ELK Stack.\nAWS CodePipeline: Monitorea pipelines y fases con CloudWatch Logs y CloudTrail para auditoría.</string>
 
+    <!--Infraestructura y Automatización-->
+    <string name="txt_Infra">Infraestructura y Automatización</string>
+    <string name="txt_objetivo1_infra">Objetivo: Gestionar y desplegar la infraestructura de manera programática y automatizada, facilitando la escalabilidad, la consistencia y la eficiencia.</string>
+    <string name="txt_punto1_infra">1. Infraestructura como Código (IaC)</string>
+    <string name="txt_objetivo2_infra">Objetivo: Definir y gestionar la infraestructura mediante código, facilitando su versión, reutilización y automatización.</string>
+    <string name="txt_contenido1_infra">Terraform:\nDescripción: Herramienta de IaC de HashiCorp que permite definir infraestructura utilizando archivos de configuración.\nVentajas: Proporciona una interfaz declarativa y soporta múltiples proveedores de nube.\nAWS CloudFormation:\nDescripción: Servicio de AWS que permite modelar y configurar la infraestructura utilizando JSON o YAML.\nVentajas: Integración nativa con AWS, gestión de recursos complejos.</string>
+    <string name="txt_punto2_infra">2. Contenedores y Orquestación</string>
+    <string name="txt_objetivo3_infra">Objetivo: Utilizar contenedores para empaquetar aplicaciones y gestionar su despliegue en clusters de manera eficiente.</string>
+    <string name="txt_contenido2_infra">Docker: Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores.\nKubernetes: Sistema de orquestación de contenedores para automatizar la implementación, escalado y gestión de aplicaciones en contenedores.</string>
 
+    <!--Monitoreo y Seguridad-->
+    <string name="txt_monitoreo">Monitoreo y Seguridad</string>
+    <string name="txt_objetivo1_monitoreo">Objetivo: Garantizar la visibilidad de la infraestructura y las aplicaciones, así como asegurar que estén protegidas contra amenazas y vulnerabilidades.</string>
+    <string name="txt_punto1_monitoreo">1. Monitoreo y Logging</string>
+    <string name="txt_objetivo2_monitoreo">Objetivo: Recoger, visualizar y analizar métricas y logs para mantener la salud de la infraestructura y las aplicaciones.</string>
+    <string name="txt_contenido1_monitoreo">Prometheus:\nDescripción: Sistema de monitoreo y alerta de código abierto que recolecta y almacena métricas en tiempo real.\nCaracterísticas: Soporte para consultas en tiempo real, recopilación de métricas y alertas configurables.\nGrafana:\nDescripción: Plataforma de visualización y análisis de métricas. \nIntegración con Prometheus: Visualiza métricas almacenadas en Prometheus.</string>
+    <string name="txt_punto2_monitoreo">2. Seguridad</string>
+    <string name="txt_objetivo3_monitoreo">Objetivo: Proteger la infraestructura y las aplicaciones contra accesos no autorizados, amenazas y vulnerabilidades.</string>
+    <string name="txt_contenido2_monitoreo">Escaneo de Vulnerabilidades:\nClair: Escáner de vulnerabilidades para imágenes Docker.\nGestión de Secretos:\nAWS Secrets Manager: Servicio de AWS para almacenar y gestionar secretos de manera segura.</string>
+    <string name="txt_punto3_monitoreo">3. Alertas y Notificaciones</string>
+    <string name="txt_objetivo4_monitoreo">Objetivo: Configurar alertas y notificaciones para reaccionar ante eventos críticos y problemas en la infraestructura y aplicaciones.</string>
+    <string name="txt_contenido3_monitoreo">Integración con Microsoft Teams y Slack:\nWebhook de Teams: Configura un webhook en Microsoft Teams y utiliza una acción en GitHub Actions para enviar mensajes.\nWebhook de Slack: Configura un webhook en Slack y usa GitHub Actions para enviar mensajes.</string>
 </resources>

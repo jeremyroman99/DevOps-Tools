@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "484378353341",
+    "project_id": "devops-tools-6eee4",
+    "storage_bucket": "devops-tools-6eee4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484378353341:android:68e67e96d607234b00e1d4",
+        "android_client_info": {
+          "package_name": "com.devopstools.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0d9DFyLTIXmjs-VVC6vldMJVZZNH-MqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

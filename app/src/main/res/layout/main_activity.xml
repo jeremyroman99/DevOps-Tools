@@ -22,255 +22,101 @@
 
             <TextView
                 android:id="@+id/textViewTitulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="30dp"
-                android:text="Colaboradores"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-                android:textStyle="bold|italic"
+                style="@style/StyleTitulos"
+                android:text="@string/txt_monitoreo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageviewColaboradorRoman"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/colaboradorroman"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
-
             <TextView
-                android:id="@+id/textViewNombreRoman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/NombreRoman"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageviewColaboradorRoman" />
-
-            <TextView
-                android:id="@+id/textViewDescripcionRoman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/DescripcionRoman"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="italic"
+                android:id="@+id/textViewObjetivo1monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo1_monitoreo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewNombreRoman" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/transparente"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionRoman">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonLinkedinRoman"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a linkedin Roman"
-                        android:onClick="openLinkedInRoman"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/linkedin_icon" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonYoutubeRoman"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a youtube Roman"
-                        android:onClick="openyoutubeRoman"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/youtube_icon" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonInstagramRoman"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a instagram Roman"
-                        android:onClick="openinstagramRoman"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/instagram_icon" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageviewColaboradorCosme"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/colaboradorcosme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
             <TextView
-                android:id="@+id/textViewNombreCosme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/NombreCosme"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold|italic"
+                android:id="@+id/textViewpunto1monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_monitoreo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageviewColaboradorCosme" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo1monitoreo" />
 
             <TextView
-                android:id="@+id/textViewDescripcionCosme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/DescripcionCosme"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="italic"
+                android:id="@+id/textViewObjetivo2monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo2_monitoreo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewNombreCosme" />
-
-
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionCosme">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonLinkedinCosme"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a linkedin Cosme"
-                        android:onClick="openLinkedInCosme"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/linkedin_icon" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonYoutubeCosme"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a youtube Cosme"
-                        android:onClick="openyoutubeCosme"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/youtube_icon" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/transparente"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/imageButtonInstagramCosme"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#00FFFFFF"
-                        android:contentDescription="Boton para ir a instagram Cosme"
-                        android:onClick="openinstagramCosme"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/instagram_icon" />
-
-                </LinearLayout>
-            </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1monitoreo" />
 
             <TextView
-                android:id="@+id/textViewCopyright"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/copyright_text"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/textViewcontenido1monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_monitoreo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo2monitoreo" />
 
+            <TextView
+                android:id="@+id/textViewpunto2monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo3monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo3monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewpunto3monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido2monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo4monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo4_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto3monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewcontenido3monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo4monitoreo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </RelativeLayout>

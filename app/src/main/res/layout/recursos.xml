@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoVista">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFondoVista"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                style="@style/StyleTitulos"
+                android:text="@string/txt_Infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo1infra"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo1_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+            <TextView
+                android:id="@+id/textViewpunto1infra"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo1infra" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo2infra"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo2_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1infra" />
+
+            <TextView
+                android:id="@+id/textViewcontenido1infra"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo2infra" />
+
+            <TextView
+                android:id="@+id/textViewpunto2infra"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1infra" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo3infra"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo3_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2infra" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2infra"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_infra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo3infra" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
+

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelativePresentacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoVista">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFondoVista"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                style="@style/StyleTitulos"
+                android:text="@string/pipeline_de_ci_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCI"
+                style="@style/StyleSubtitulo"
+                android:text="@string/txt_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivoCI"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCI" />
+
+            <TextView
+                android:id="@+id/textViewpunto1CI"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivoCI" />
+
+            <TextView
+                android:id="@+id/textViewcontenido1CI"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1CI" />
+
+            <TextView
+                android:id="@+id/textViewpunto2CI"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1CI" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2CI"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2CI" />
+
+            <TextView
+                android:id="@+id/textViewCD"
+                style="@style/StyleSubtitulo"
+                android:text="@string/txt_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido2CI" />
+
+            <TextView
+                android:id="@+id/textViewObjetivoCD"
+                style="@style/StyleObjetivos"
+                android:text="@string/objetivo_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCD" />
+
+            <TextView
+                android:id="@+id/textViewpunto1CD"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivoCD" />
+
+            <TextView
+                android:id="@+id/textViewcontenido1CD"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1CD" />
+
+            <TextView
+                android:id="@+id/textViewpunto2CD"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1CD" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2CD"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_cd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2CD" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

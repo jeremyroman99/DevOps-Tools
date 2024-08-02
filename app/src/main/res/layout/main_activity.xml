@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelativeHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoVista">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFondoVista"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                style="@style/StyleTitulos"
+                android:text="@string/txt_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo1monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo1_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+            <TextView
+                android:id="@+id/textViewpunto1monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto1_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo1monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo2monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo2_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto1monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewcontenido1monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido1_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo2monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewpunto2monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto2_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido1monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo3monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto2monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewcontenido2monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido2_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo3monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewpunto3monitoreo"
+                style="@style/StylePuntos"
+                android:text="@string/txt_punto3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcontenido2monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewObjetivo4monitoreo"
+                style="@style/StyleObjetivos"
+                android:text="@string/txt_objetivo4_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewpunto3monitoreo" />
+
+            <TextView
+                android:id="@+id/textViewcontenido3monitoreo"
+                style="@style/StyleContenidos"
+                android:text="@string/txt_contenido3_monitoreo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewObjetivo4monitoreo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -112,6 +112,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: APK
+    - run: ls APK
     - name: upload artifact to Firebase App Distribution
       uses: wzieba/Firebase-Distribution-Github-Action@v1
       with:

@@ -2,11 +2,6 @@
     <string name="app_name">DevOps Untels</string>
     <string name="copyright_text">© 2024 Roman | Cosme</string>
 
-    <!--Bottom Navigation Names-->
-    <string name="home">Inicio</string>
-    <string name="resources">Recursos</string>
-    <string name="collaborator">Colaboradores</string>
-
     <!--CI CD-->
     <string name="pipeline_de_ci_cd">Pipeline de CI/CD</string>
     <string name="txt_ci">Integración Continua (CI):</string>

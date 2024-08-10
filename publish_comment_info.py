@@ -24,7 +24,7 @@ lint_warnings = os.environ.get('LINT_WARNINGS', 'N/A')
 github_run_id = os.environ['GITHUB_RUN_ID']
 
 # Crear el cuerpo del comentario con el número de errores y advertencias
-comment_body = f"Reporte de Lint:\nNúmero de errores: {lint_errors}\nNúmero de advertencias: {lint_warnings}\n Para descargar el reporte completo de las pruebas lint ir al apartado de Artifacts : https://github.com/jeremyroman99/DevOps-Untels/actions/runs/{github_run_id}"
+comment_body = f"Reporte de Lint:\nNúmero de errores: {lint_errors}\nNúmero de advertencias: {lint_warnings}\n Para descargar el reporte completo de las pruebas lint ir al apartado de Artifacts : https://github.com/jeremyroman99/DevOps-Tools/actions/runs/{github_run_id}"
 
 # Publicar el comentario en el pull request
 pr = repo.get_pull(int(pr_number))

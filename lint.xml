@@ -1,19 +1,16 @@
 <lint>
-    <!-- Suprimir advertencias de recursos no utilizados en drawables -->
+    <issue id="UnnecessaryParent">
+        <ignore path="res/layout/main_activity.xml" />
+        <ignore path="res/layout/presentacion.xml" />
+        <ignore path="res/layout/recursos.xml" />
+    </issue>
+    
     <issue id="UnusedResources">
         <ignore path="res/drawable/ic_launcher_background.xml" />
         <ignore path="res/drawable/ic_launcher_foreground.xml" />
         <ignore path="res/drawable/icondevops.png" />
         <ignore path="res/drawable/splash_screen.xml" />
-    </issue>
-
-    <!-- Suprimir advertencias de recursos no utilizados en strings -->
-    <issue id="UnusedResources">
         <ignore path="res/values/strings.xml" />
-    </issue>
-
-    <!-- Suprimir advertencias de recursos no utilizados en temas -->
-    <issue id="UnusedResources">
         <ignore path="res/values/themes.xml" />
     </issue>
 </lint>

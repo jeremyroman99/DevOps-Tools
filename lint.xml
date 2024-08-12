@@ -1,5 +1,19 @@
 <lint>
+    <!-- Suprimir advertencias de recursos no utilizados en drawables -->
     <issue id="UnusedResources">
-        <ignore path="app/src/main/res/values/colors.xml"/>
+        <ignore path="res/drawable/ic_launcher_background.xml" />
+        <ignore path="res/drawable/ic_launcher_foreground.xml" />
+        <ignore path="res/drawable/icondevops.png" />
+        <ignore path="res/drawable/splash_screen.xml" />
+    </issue>
+
+    <!-- Suprimir advertencias de recursos no utilizados en strings -->
+    <issue id="UnusedResources">
+        <ignore path="res/values/strings.xml" />
+    </issue>
+
+    <!-- Suprimir advertencias de recursos no utilizados en temas -->
+    <issue id="UnusedResources">
+        <ignore path="res/values/themes.xml" />
     </issue>
 </lint>

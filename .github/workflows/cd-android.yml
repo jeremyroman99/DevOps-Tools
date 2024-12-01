@@ -129,12 +129,12 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: aab-build
-          path: AAB/app-release.aab
+          path: app-release.aab
           retention-days: 7
     - name: Deploy to Play Store
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
         packageName: com.devopstools.app
-        releaseFiles: AAB/app-release.aab
+        releaseFiles: app-release.aab
         track: internal

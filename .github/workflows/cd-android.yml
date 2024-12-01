@@ -59,7 +59,7 @@ jobs:
      - run: ls
      - name: Build project
        run: |
-        zip --junk-paths artefactos AAB/app-release.aab APK/app-debug.apk
+        zip --junk-paths artefactos app-release.aab app-debug.apk
      - name: Obtener la última versión del release
        id: get_latest_release
        run: |
@@ -112,7 +112,6 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: APK
-    - run: ls APK
     - name: upload artifact to Firebase App Distribution
       uses: wzieba/Firebase-Distribution-Github-Action@v1
       with:

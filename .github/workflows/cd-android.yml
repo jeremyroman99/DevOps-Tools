@@ -59,7 +59,7 @@ jobs:
      - run: ls
      - name: Build project
        run: |
-        zip --junk-paths artefactos AAB/app-release.aab APK/app-debug.apk
+        zip --junk-paths artefactos app-release.aab app-debug.apk
      - name: Obtener la última versión del release
        id: get_latest_release
        run: |

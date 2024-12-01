@@ -49,11 +49,11 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Download from build APK
-       uses: actions/download-artifact@v1
+       uses: actions/download-artifact@v4
        with:
          name: APK
      - name: Download from build AAB
-       uses: actions/download-artifact@v1
+       uses: actions/download-artifact@v4
        with:
          name: AAB
      - run: ls
@@ -109,7 +109,7 @@ jobs:
          needs.build.result == 'success'
     steps:
     - name: Download from build APK
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: APK
     - run: ls APK
@@ -121,7 +121,7 @@ jobs:
         groups: testers
         file: APK/app-debug.apk
     - name: Download from build AAB
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: AAB
     - run: ls

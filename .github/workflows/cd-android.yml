@@ -19,7 +19,7 @@ jobs:
     - name: build release 
       run: ./gradlew assembleRelease
     - name: upload-artifact-apk
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
           name: APK
           path: app/build/outputs/apk/debug/app-debug.apk
@@ -34,7 +34,7 @@ jobs:
         keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
     - name: upload-artifact-aab
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
           name: AAB
           path: app/build/outputs/bundle/release/app-release.aab
@@ -125,7 +125,7 @@ jobs:
         name: AAB
     - run: ls
     - name: Upload App Bundle
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
           name: aab-build
           path: AAB/app-release.aab
